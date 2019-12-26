@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTrack));
             this.labelTrackNo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTrack = new System.Windows.Forms.TextBox();
             this.buttonCheck = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.dataGridViewTrack = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrack)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTrackNo
@@ -46,13 +48,13 @@
             this.labelTrackNo.TabIndex = 0;
             this.labelTrackNo.Text = "Takip Numarası:";
             // 
-            // textBox1
+            // textBoxTrack
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(237, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 35);
-            this.textBox1.TabIndex = 1;
+            this.textBoxTrack.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTrack.Location = new System.Drawing.Point(237, 28);
+            this.textBoxTrack.Name = "textBoxTrack";
+            this.textBoxTrack.Size = new System.Drawing.Size(197, 35);
+            this.textBoxTrack.TabIndex = 1;
             // 
             // buttonCheck
             // 
@@ -65,6 +67,7 @@
             this.buttonCheck.TabIndex = 2;
             this.buttonCheck.Text = "SORGULA";
             this.buttonCheck.UseVisualStyleBackColor = false;
+            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // buttonBack
             // 
@@ -79,20 +82,31 @@
             this.buttonBack.UseVisualStyleBackColor = false;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // dataGridViewTrack
+            // 
+            this.dataGridViewTrack.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewTrack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTrack.Location = new System.Drawing.Point(36, 151);
+            this.dataGridViewTrack.Name = "dataGridViewTrack";
+            this.dataGridViewTrack.Size = new System.Drawing.Size(398, 243);
+            this.dataGridViewTrack.TabIndex = 7;
+            // 
             // FormTrack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.dataGridViewTrack);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonCheck);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTrack);
             this.Controls.Add(this.labelTrackNo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTrack";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KARGO TAKİP";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTrack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,8 +115,9 @@
         #endregion
 
         private System.Windows.Forms.Label labelTrackNo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTrack;
         private System.Windows.Forms.Button buttonCheck;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.DataGridView dataGridViewTrack;
     }
 }
