@@ -15,10 +15,6 @@ namespace MarmaraKargo
 {
     public partial class FormLogin : Form
     {
-
-
-        // SqlConnection baglanti = new SqlConnection("Data Source=ASU\\SQLEXPRESS;Initial Catalog=MarmaraKargoDB;Integrated Security=True");
-
         public FormLogin()
         {
             InitializeComponent();
@@ -57,6 +53,12 @@ namespace MarmaraKargo
             }
             
 
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '*';
+            textBoxPassword.MaxLength = 8;
         }
 
         private void textBoxPassword_KeyUp(object sender, KeyEventArgs e)

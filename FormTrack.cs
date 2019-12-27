@@ -28,7 +28,7 @@ namespace MarmaraKargo
         private void buttonCheck_Click(object sender, EventArgs e)
         {
             long trackno = long.Parse(textBoxTrack.Text);
-            // 35121922171821
+           
             List<DETAILS> listTrackInfo = Context.Conn.DETAILS.Where(x => x.TrackNo == trackno).ToList();
             if (listTrackInfo.Count == 0)
             {

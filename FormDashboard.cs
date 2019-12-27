@@ -39,5 +39,12 @@ namespace MarmaraKargo
             this.Hide();
             frm.Show();
         }
+
+        private void buttonShipmentUpdate_Click(object sender, EventArgs e)
+        {
+            FormUpdate frm = new FormUpdate();
+            this.Hide();
+            frm.Show();
+        }
     }
 }

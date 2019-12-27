@@ -230,7 +230,7 @@
             this.Controls.Add(this.comboBoxCity);
             this.Name = "FormNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormNew";
+            this.Text = "YENİ KARGO";
             this.Load += new System.EventHandler(this.FormNew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

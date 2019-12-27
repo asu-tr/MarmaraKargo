@@ -45,6 +45,7 @@
             this.buttonShipmentUpdate.TabIndex = 1;
             this.buttonShipmentUpdate.Text = "Kargo Güncelle";
             this.buttonShipmentUpdate.UseVisualStyleBackColor = false;
+            this.buttonShipmentUpdate.Click += new System.EventHandler(this.buttonShipmentUpdate_Click);
             // 
             // buttonNewShipment
             // 
@@ -95,7 +96,7 @@
             this.Controls.Add(this.buttonShipmentUpdate);
             this.Name = "FormDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormDashboard";
+            this.Text = "ANA SAYFA";
             this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
