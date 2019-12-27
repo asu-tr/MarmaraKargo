@@ -56,9 +56,13 @@ namespace MarmaraKargo
 
             foreach (USERS office in listBranches)
             {
+                string tel = office.Telephone.ToString();
+                tel = "(0" + tel.Substring(0, 3) + ") " + tel.Substring(3, 3) + " " + tel.Substring(6, 2) + " " + tel.Substring(8, 2);
                 textBoxContact.Text += office.Name;
                 textBoxContact.Text += Environment.NewLine;
                 textBoxContact.Text += office.Address;
+                textBoxContact.Text += Environment.NewLine;
+                textBoxContact.Text += tel;
                 textBoxContact.Text += Environment.NewLine + Environment.NewLine;
             }
         }
